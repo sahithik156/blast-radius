@@ -1,0 +1,2 @@
+﻿gitpython==3.1.50
+networkx==3.6.1
