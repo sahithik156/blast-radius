@@ -113,7 +113,7 @@ function DependencyGraph({ files, edges, selectedFile, onSelectFile }) {
     if (graphRef.current) {
       setTimeout(() => graphRef.current.zoomToFit(400, 50), 300)
     }
-  }, [graphData])
+  }, [files, edges])
 
   return (
     <div className="dependency-graph">
