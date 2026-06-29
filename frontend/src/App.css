@@ -1,0 +1,166 @@
+/*
+App.css
+
+Basic styling so the app is legible and roughly matches the look of our
+earlier mockups (dark cards, color-coded risk levels). Kept intentionally
+simple, this is a v1 functional UI, not a polished design pass.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #1a1a1a;
+  color: #e8e8e8;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: #999;
+  margin: 0 0 24px;
+}
+
+.repo-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.repo-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #252525;
+  color: #e8e8e8;
+  font-size: 14px;
+}
+
+.repo-input button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #4a7dff;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.repo-input button:disabled {
+  background: #444;
+  cursor: not-allowed;
+}
+
+.error-banner {
+  background: #3a1f1f;
+  border: 1px solid #a04444;
+  color: #ff8a8a;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.results-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 16px;
+  height: 70vh;
+}
+
+.risk-list {
+  overflow-y: auto;
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.risk-list-summary {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #999;
+  padding: 4px 8px 12px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 8px;
+}
+
+.risk-card {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: #252525;
+}
+
+.risk-card:hover {
+  background: #2a2a2a;
+}
+
+.risk-card.selected {
+  border-color: #D85A30;
+  background: #2e2420;
+}
+
+.risk-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.filepath {
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.risk-score {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.risk-high .risk-score {
+  background: #4a2020;
+  color: #ff8a6a;
+}
+
+.risk-medium .risk-score {
+  background: #4a3c1a;
+  color: #e8b85a;
+}
+
+.risk-low .risk-score {
+  background: #1f3a2a;
+  color: #6ad88a;
+}
+
+.risk-card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+.dependency-graph {
+  background: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+}
